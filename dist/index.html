@@ -4,19 +4,373 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Watch Anime</title>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-    <header>
-        <h1 id="first-heading">Welcome to Gulp</h1>
+<body class="body">
+	<header class="header">
+			<div class="wrapper">
+				<nav class="nav">
+					<div class="burger">
+						<input type="checkbox" 
+						name="" 
+						id="burger-checkbox" 
+						class="burger__checkbox">
+						<label for="burger-checkbox" class="burger__label">MENU</label>
+						<div class="burger-line first"></div>
+						<div class="burger-line second"></div>
+						<div class="burger-line third"></div>
+						<div class="burger-line fourth"></div>
+						<div class="burger__menu">
+							<a href="#" class="burger__menu-link">Аниме</a>
+							<a href="#" class="burger__menu-link">Полнометражки</a>
+							<a href="#" class="burger__menu-link">Манга</a>
+							<a href="#" class="burger__menu-link">Игры</a>
+							<a href="#" class="burger__menu-link">Картинки</a>
+							<a href="#" class="burger__menu-link">Музыка</a>
+						</div>
+					</div>
+					<ul class="nav__links">
+						<li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+						<li class="nav__item one">
+							<a href="#" class="nav__link">bleach</a>
+							<ul class="nav__dropdown one">
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Аниме</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Полнометражки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Манга</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Игры</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Картинки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Музыка</a></li>
+							</ul>
+						</li>
+						
+						<li class="nav__item two">
+							<a href="#" class="nav__link">one piece</a>
+							<ul class="nav__dropdown ецщ">
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Аниме</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Полнометражки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Манга</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Игры</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Картинки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Музыка</a></li>
+							</ul>
+						</li>
+						<li class="nav__item three">
+							<a href="#" class="nav__link">другие</a>
+							<ul class="nav__dropdown three">
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Аниме</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Полнометражки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Манга</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Игры</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Картинки</a></li>
+								<li class="nav__dropdown-item"><a href="#" class="nav__dropdown-link">Музыка</a></li>
+							</ul>
+						</li>
+						<li class="nav__item four">
+							<a href="#" class="nav__link">ссылка</a>
+						</li>
+					</ul>
+					<div class="nav__search search">
+						<input class="search__input" type="search" name="" id="search__nav" 
+						placeholder="Поиск...">
+					</div>
+					<a href="#" class="nav__logo">
+						<h2 class="nav__logo-heading">WATCH-<span class="heading-blue">ANIME</span></h2>
+						<p class="nav__logo-paragraph">watchanime.com</p>
+					</a>
+				</nav>
+			</div>
     </header>
-    <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fuga sunt blanditiis! Rerum dignissimos eaque et quam unde in doloribus quos porro voluptatibus ipsam dolorem animi repellendus non, est ea?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fuga sunt blanditiis! Rerum dignissimos eaque et quam unde in doloribus quos porro voluptatibus ipsam dolorem animi repellendus non, est ea?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fuga sunt blanditiis! Rerum dignissimos eaque et quam unde in doloribus quos porro voluptatibus ipsam dolorem animi repellendus non, est ea?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fuga sunt blanditiis! Rerum dignissimos eaque et quam unde in doloribus quos porro voluptatibus ipsam dolorem animi repellendus non, est ea?</p>
+
+    <main class="main">
+			<div class="wrapper">
+				<div class="content">
+					<div class="content__left-column">
+						<section class="slider">
+							<a href="#">
+								<div class="slider__slide active bleach">
+									<div class="slider__slide-text">
+										<h3 class="slider__slide-heading">BLEACH</h3>
+										<p class="slider__slide-description">
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+										</p>
+									</div>
+								</div>
+							</a>
+							<a href="#">
+								<div class="slider__slide one-piece">
+									<div class="slider__slide-text">
+										<h3 class="slider__slide-heading">one piece</h3>
+										<p class="slider__slide-description">
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+										</p>
+									</div>
+								</div>
+							</a>
+							<a href="#">
+								<div class="slider__slide kurokami">
+									<div class="slider__slide-text">
+										<h3 class="slider__slide-heading">kurokami</h3>
+										<p class="slider__slide-description">
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+										</p>
+									</div>
+								</div>
+							</a>
+							<a href="#">
+								<div class="slider__slide konosuba">
+									<div class="slider__slide-text">
+										<h3 class="slider__slide-heading">Kono Subarashii Sekai ni Shukufuku wo!</h3>
+										<p class="slider__slide-description">
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+										</p>
+									</div>
+								</div>
+							</a>
+						</section>
+						<section class="main__cards cards">
+							<div class="card">
+								<a href="#" class="card__content">
+								</a>
+							</div>
+							<div class="card">
+								<a href="#" class="card__content">
+								</a>
+							</div>
+							<div class="card">
+								<a href="#" class="card__content">
+								</a>
+							</div>
+
+						</section>
+						<section class="posts">
+							<div class="post active">
+								<div class="post__image"></div>
+								<div class="post__content">
+									<h3 class="post__heading">корона грешника - 1 серия</h3>
+									<div class="post__info">
+										<div class="post__left-column">
+											<p><b>Производство: </b>Япония</p>
+											<p><b>Жанр: </b>сёнэн</p>
+											<p><b>Выпуск: </b> с 14.10.2011</p>
+										</div>
+										<div class="post__right-column">
+											<p><b>Режиссёр: </b>Араки Тэцуро</p>
+											<p><b>Автор: </b>Мияги Ёсуке</p>
+											<p><b>Озвучка: </b> AniDUB</p>
+										</div>
+									</div>
+									<div class="post__watches">
+										<b>Просмотров: </b> 297 | <b>Категория: </b> other Anime & Games
+									</div>
+									<div class="post__buttons">
+										<a href="#" class="post__watch post__button">Просмотр</a>
+										<a href="#" class="post__comment post__button">Обсудить</a>
+									</div>
+								</div>
+								<div class="post__date">05.11<br>2022</div>
+							</div>
+							<div class="post">
+								<div class="post__image kurokami"></div>
+								<div class="post__content">
+									<h3 class="post__heading">Тёмная богиня - 2 серия</h3>
+									<div class="post__info">
+										<div class="post__left-column">
+											<p><b>Производство: </b>Япония</p>
+											<p><b>Жанр: </b>сёнэн</p>
+											<p><b>Выпуск: </b> с 08.01.2009</p>
+										</div>
+										<div class="post__right-column">
+											<p><b>Режиссёр: </b>Цунэо Кобаяси</p>
+											<p><b>Автор: </b>Далл Ён Лим</p>
+											<p><b>Озвучка: </b>JAM, Tinda</p>
+										</div>
+									</div>
+									<div class="post__watches">
+										<b>Просмотров: </b> 241 | <b>Категория: </b> other Anime & Games
+									</div>
+									<div class="post__buttons">
+										<a href="#" class="post__watch post__button">Просмотр</a>
+										<a href="#" class="post__comment post__button">Обсудить</a>
+									</div>
+								</div>
+								<div class="post__date">05.11<br>2022</div>
+							</div>
+							<div class="post">
+								<div class="post__image"></div>
+								<div class="post__content">
+									<h3 class="post__heading">корона грешника - 3 серия</h3>
+									<div class="post__info">
+										<div class="post__left-column">
+											<p><b>Производство: </b>Япония</p>
+											<p><b>Жанр: </b>сёнэн</p>
+											<p><b>Выпуск: </b> с 14.10.2011</p>
+										</div>
+										<div class="post__right-column">
+											<p><b>Режиссёр: </b>Араки Тэцуро</p>
+											<p><b>Автор: </b>Мияги Ёсуке</p>
+											<p><b>Озвучка: </b> AniDUB</p>
+										</div>
+									</div>
+									<div class="post__watches">
+										<b>Просмотров: </b> 297 | <b>Категория: </b> other Anime & Games
+									</div>
+									<div class="post__buttons">
+										<a href="#" class="post__watch post__button">Просмотр</a>
+										<a href="#" class="post__comment post__button">Обсудить</a>
+									</div>
+								</div>
+								<div class="post__date">05.11<br>2022</div>
+							</div>
+							<div class="post">
+								<div class="post__image"></div>
+								<div class="post__content">
+									<h3 class="post__heading">корона грешника - 4 серия</h3>
+									<div class="post__info">
+										<div class="post__left-column">
+											<p><b>Производство: </b>Япония</p>
+											<p><b>Жанр: </b>сёнэн</p>
+											<p><b>Выпуск: </b> с 14.10.2011</p>
+										</div>
+										<div class="post__right-column">
+											<p><b>Режиссёр: </b>Араки Тэцуро</p>
+											<p><b>Автор: </b>Мияги Ёсуке</p>
+											<p><b>Озвучка: </b> AniDUB</p>
+										</div>
+									</div>
+									<div class="post__watches">
+										<b>Просмотров: </b> 297 | <b>Категория: </b> other Anime & Games
+									</div>
+									<div class="post__buttons">
+										<a href="#" class="post__watch post__button">Просмотр</a>
+										<a href="#" class="post__comment post__button">Обсудить</a>
+									</div>
+								</div>
+								<div class="post__date">05.11<br>2022</div>
+							</div>
+							<div class="post">
+								<div class="post__image"></div>
+								<div class="post__content">
+									<h3 class="post__heading">корона грешника - 5 серия</h3>
+									<div class="post__info">
+										<div class="post__left-column">
+											<p><b>Производство: </b>Япония</p>
+											<p><b>Жанр: </b>сёнэн</p>
+											<p><b>Выпуск: </b> с 14.10.2011</p>
+										</div>
+										<div class="post__right-column">
+											<p><b>Режиссёр: </b>Араки Тэцуро</p>
+											<p><b>Автор: </b>Мияги Ёсуке</p>
+											<p><b>Озвучка: </b> AniDUB</p>
+										</div>
+									</div>
+									<div class="post__watches">
+										<b>Просмотров: </b> 297 | <b>Категория: </b> other Anime & Games
+									</div>
+									<div class="post__buttons">
+										<a href="#" class="post__watch post__button">Просмотр</a>
+										<a href="#" class="post__comment post__button">Обсудить</a>
+									</div>
+								</div>
+								<div class="post__date">05.11<br>2022</div>
+							</div>
+						</section>
+						<section class="pages">
+							<ul class="pages__list">
+								<li class="pages__item"><a href="#" value="1" class="pages__link active">1</a></li>
+								<li class="pages__item"><a href="#" value="2" class="pages__link">2</a></li>
+								<li class="pages__item"><a href="#" value="3" class="pages__link">3</a></li>
+								<li class="pages__item"><a href="#" value="4" class="pages__link">4</a></li>
+								<li class="pages__item"><a href="#" value="5" class="pages__link">5</a></li>
+							</ul>
+						</section>
+					</div>					
+					<div class="content__right-column">
+
+						<div class="profile">
+							<h2 class="profile__heading">проФиль</h2>
+							<div class="profile__flex-wrapper">
+								<div class="profile__left-column">
+									<div class="flex-group">
+										<img src="images/profile/001.png" alt="profile picture" class="profile__picture">
+										<ul class="profile__links">
+											<li class="profile__item">
+												<a href="#" class="profile__link">Мой профиль</a>
+											</li>
+											<li class="profile__item">
+												<a href="#" class="profile__link">Мои закладки (4)</a>
+											</li>
+											<li class="profile__item">
+												<a href="#" class="profile__link">Сообщения (2)</a>
+											</li>
+											<li class="profile__item">
+												<a href="#" class="profile__link">Личный статус</a>
+											</li>
+										</ul>
+									</div>
+									<button href="#" class="profile__exit">Выйти</button>
+								</div>
+								<div class="profile__right-column">
+									<ul class="profile__admin-links">
+										<li class="profile__admin-item">
+											<a href="#" class="profile__admin-link">Статистика</a>
+										</li>
+										<li class="profile__admin-item">
+											<a href="#" class="profile__admin-link">Добавить новость</a>
+										</li>
+										<li class="profile__admin-item">
+											<a href="#" class="profile__admin-link">Настройки форума</a>
+										</li>
+										<li class="profile__admin-item">
+											<a href="#" class="profile__admin-link">Форум</a>
+										</li>
+										<li class="profile__admin-item">
+											<a href="#" class="profile__admin-link">Добавить тему</a>
+										</li>
+										<li class="profile__admin-item">
+											<a href="#" class="profile__admin-link">Сменить данные</a>
+										</li>
+									</ul>
+									<button class="profile__admin-panel">АдмиНка</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="chat"></div>
+						<div class="last-comments"></div>
+					</div>					
+				</div>
+			</div>
     </main>
+
+    <footer class="footer">
+			<div class="wrapper">
+				<img src="/images/footer/prozrachnaya-chan.png" alt="anime chan" class="footer__image">
+				<p class="footer__paragraph">Все права защищены</p>
+				<p class="footer__designed-by">
+					Designed by <span class="footer__akcent-green">Adattamento</span>
+				</p>
+				<p class="footer__design">
+					Дизайн: <span class="footer__heading-blue">KeFup</span>
+				</p>
+				<p class="footer__verstka">
+					Вёрстка: <span class="footer__akcent-green">Я</span>
+				</p>
+				<p class="footer__red">
+					Копирование материалов разрешено ТОЛЬКО при наличии обратной ссылки на наш сайт!
+				</p>
+				<a href="" class="footer__link">
+					Скачать наШе приложение
+				</a>
+				<div class="footer__buttons">
+					<div class="footer__button">88x31</div>
+					<div class="footer__button">88x31</div>
+					<div class="footer__button">88x31</div>
+				</div>
+			</div>
+		</footer>
+
 
     <script src="js/main.min.js"></script>
 </body>
