@@ -1,0 +1,798 @@
+b {
+	font-weight: bold;
+}
+
+.body {
+	background-color: rgb(197, 197, 197);
+	background: url("../images/body/background-2.jpg") no-repeat;
+	background-size: cover;
+} 
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.nav {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	height: 65px;
+	justify-content: space-between;
+	background-color: #E2E2E2;
+	padding: 3px 15px 3px 20px;
+	border-radius: 0 0 4px 4px;
+
+	&__links{
+		display: flex;
+		padding: 5px;
+	}
+	&__item {
+		margin-right: 15px;	
+		position: relative;
+
+		&:last-of-type {
+			margin-right: 0px;
+		}
+
+		&.one:hover {
+			& .nav__dropdown {
+				display: block;
+			}
+		}
+		&.two:hover {
+			& .nav__dropdown {
+				display: block;
+			}
+		}
+		&.three:hover {
+			& .nav__dropdown {
+				display: block;
+			}
+		}
+	}
+	&__link {
+		box-sizing: border-box;
+		display: block;
+
+		padding: 5px 10px;
+		background-color: #E2E2E2;
+		border-radius: 4px;
+		color: black;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:hover {
+			background-color: $heading__blue;
+			color: white;
+		}
+
+	
+	}
+
+	&__dropdown {
+		display: none;
+		position: absolute;
+		min-width: 100px;
+		padding: 8px 15px;
+		top: 26px;
+		left: -25px;
+		background-color: #707070;
+		border-radius: 5px;
+	}
+	&__dropdown-item {
+		margin-bottom: 4px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	&__dropdown-link {
+		color: white;
+		text-decoration: none;
+		&:hover {
+			color: #77DAFF;
+		}
+	}
+
+	&__logo {
+		display: block;
+		text-decoration: none;
+		width: 220px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+		color: #9C9C9C;
+
+		&-heading {
+			font-size: 30px;
+		}
+		&-paragraph {
+			font-size: 14px;
+		}
+	}
+}
+
+.burger {
+	display: none;
+	width: 200px;
+	position: relative;
+	color: white;
+	text-align: center;
+	height: 40px;
+	font-family: 'Arial';
+	&:hover {
+		background-color: $heading__blue;
+		border-radius: 3px;
+		& > .burger__label {
+			color: white;
+		}
+	}
+
+	&__checkbox{
+		display: none;
+	}
+	&__label {
+		box-sizing: border-box;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		line-height: 40px;
+		color: black;
+		
+
+		&:hover {
+
+			border-radius: 3px;
+
+		}
+	}
+
+	&-line {
+		position: absolute;
+		top: 8px;
+		left: 10px;
+		width: 35px;
+		height: 2px;
+		background-color: black;	
+		transition: .5s all;
+
+		&.second, &.third {
+			top: 18px;
+		}
+		&.fourth {
+			top: 28px;
+		}
+	}
+
+	&__menu {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		transform: translateY(100%);
+		max-height: 0;
+		font-size: 0;
+		overflow: hidden;
+		transition: .5s all;
+		text-align: center;
+
+		&-link {
+			box-sizing: border-box;
+			display: block;
+			width: 100%;
+			padding: 10px;
+			color: black;
+			text-decoration: none;
+			border-top: 1px solid rgba(255,255,255,.3);
+			background-color: #e2e2e2;
+
+			&:hover {
+				background-color: $heading__blue;
+				color: white;
+			}
+		}
+	}
+}
+#burger-checkbox:checked ~ .burger__menu {
+	max-height: 500px;
+	font-size: 16px;
+}
+#burger-checkbox:checked ~ .burger-line.first,
+#burger-checkbox:checked ~ .burger-line.fourth {
+	display: none;
+}
+#burger-checkbox:checked ~ .burger-line.second {
+	transform: rotate(45deg);
+}
+#burger-checkbox:checked ~ .burger-line.third {
+	transform: rotate(-45deg);
+}
+
+.search {
+	background-color: #707070;
+	position: relative;
+	width: 230px;
+	height: 100%;
+	padding-right: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&::before, &::after {
+		content: "";
+		position: absolute;
+		width: 42px;
+		height: 42px;
+		transform: rotateZ(45deg);
+	}
+	&::before {
+		top: 9px;
+		left: -21px;
+		background-color: #707070;
+	}
+	&::after {
+		top: 9px;
+		right: -21px;
+		background-color: #e2e2e2;
+	}
+
+	&__input {
+		box-sizing: border-box;
+		background-color: #E5E4E4;
+		width: 140px;
+		height: 27px;
+		border: none;
+		border-radius: 3px;
+		padding: 0 14px;
+
+		&:focus {
+			border: 2px solid $heading__blue;
+		}
+	}
+}
+
+.main {
+	margin-top: 200px;
+
+	& .content {
+		box-sizing: border-box;
+		display: grid;
+		grid-template-columns: 13fr 4fr;
+		gap: 12px;
+
+		padding: 12px;
+		background-color: $left__container-bg;
+		min-height: 300px;
+		width: 100%;
+		border-radius: 5px;
+		border: 1px solid transparent;
+
+		&__left-column {
+			background-color: $left__container-bg;
+
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 12px;
+			
+		}
+		&__right-column {
+
+			background-color: $left__container-bg;
+		}
+	}
+
+}
+
+// slider
+.slider {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	height: $slider__height;
+	background-color: rgb(42, 38, 38);
+	border: 15px solid rgb(143, 143, 143);
+	border-radius: 5px;
+
+	&__slide {
+		box-sizing: border-box;
+		display: none;
+		box-sizing: border-box;
+		background-color: lightgrey;
+		width: 100%;
+		height: 100%;
+		position: relative;
+
+		&-text {
+			box-sizing: border-box;
+			background-color: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			padding: 8px 10px 8px 10px;
+		}
+
+		&-heading {
+			text-transform: uppercase;
+			color: white;
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+
+		&-description {
+			color: $heading__blue;
+			margin-top: 5px;
+		}
+
+		&:nth-of-type(2n) {
+			background-color: grey;
+		}
+		&.active {
+			display: block;
+		}
+		&.bleach {
+			background: url("../images/slider/ichigo-hollow-01.jpg") no-repeat;
+			background-size: cover;
+		}
+		&.one-piece {
+			background: url("../images/slider/one-piece2.png") no-repeat;
+			background-size: cover;
+		}
+		&.kurokami {
+			background: url("../images/slider/kurokami3.png") no-repeat;
+			background-size: cover;
+		}
+		&.konosuba {
+			background: url("../images/slider/konosuba4.jpg") no-repeat;
+			background-size: cover;
+		}
+	}
+
+	&__button {
+		position: absolute;
+		top: calc(50% - 20px);
+		z-index: 10;
+		font-size: 30px;
+		width: 40px;
+		height: 40px;
+		border: none;
+		font-weight: bold;
+		color: white;
+
+		&:hover {
+				background-color: rgb(123, 255, 123)
+		} 
+	}
+	&__prev {
+			left: 0;
+			background-color: rgb(0, 0, 0);
+			border-radius: 0 50% 50% 0;
+	}
+	&__next {
+			right: 0;
+			background-color: rgb(0, 0, 0);
+			border-radius: 50% 0 0 50%;
+	}
+}
+
+.cards {
+	box-sizing: border-box;
+	width: 100%;
+	height: $cards__container-height;
+	background-color: $left__container-bg;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	& .card {
+		box-sizing: border-box;
+		border: 8px solid #707070;
+		border-radius: 8px;
+		height: 100%;
+		max-width: 32%;
+		width: 100%;
+		background-color: #707070;
+
+
+		&__content {
+			display: block;
+			position: relative;
+			box-sizing: border-box;
+			border: 3px solid $heading__blue;
+			border-radius: 3px;
+			height: 100%;
+			width: 100%;
+			background: url("../images/posts/lain.jpg") no-repeat center;
+			background-size: cover;
+			&::after {
+				position: absolute;
+				box-sizing: border-box;
+				content: "Эксперименты Лэйн - 2 серия";
+				bottom: 10px;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+				width: 100%;
+				height: 40px;
+				padding-top: 12px;
+			}
+
+			&:hover {
+
+				&::after {
+					transition: all 150ms ease-out;
+					position: absolute;
+					content: "";
+					width: 100%;
+					height: 100%;
+					bottom: 0;
+				}
+				&::before {
+					position: absolute;
+					content: "";
+					top: calc(50% - 20px);
+					left: calc(50% - 20px);
+					background-image: url("../images/svg/search-solid.svg");
+					background-repeat: no-repeat;
+					z-index: 2;
+					width: 40px;
+					height: 40px;
+					
+				}
+			}
+		}
+	}
+}
+
+.posts {
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	.post {
+		position: relative;
+		display: none;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 10px;
+		background-color: #FFFFFF;
+		border: 1px solid #DADADA;
+		margin-bottom: 10px;
+		
+		&.active {
+			display: flex;
+		}
+
+		&__date {
+			box-sizing: border-box;
+			position: absolute;
+			top: 50px;
+			left: -$post__date-width;
+			background-color: $akcent__green;
+			width: $post__date-width;
+			height: 35px;
+			text-align: center;
+			color: $post__date-color;
+			border-radius: 3px 0 0 3px;
+			padding-top: 6px;
+			font-size: 12px;
+			font-weight: bold;
+		}
+
+		&__image {
+			width: $post__image-width;
+			height: calc(100% - 10px);
+			background: url("../images/posts/guilty-crown.jpg") no-repeat;
+			background-size: cover;
+			border: 5px solid $heading__blue;
+			border-radius: 3px 0 3px 3px;
+			&.kurokami {
+				background: url("../images/slider/kurokami003.jpg") no-repeat;
+			}
+		}
+
+		&__content {
+			box-sizing: border-box;
+			/* border: 5px solid lightgreen; */
+			width: 100%;
+
+			& .post {
+				&__heading {
+					background-color: $heading__blue;
+					display: block;
+					padding: 10px 20px;
+					text-align: center;
+					text-transform: uppercase;
+					color: white;
+					border-radius: 0 3px 3px 0;
+				}
+				&__info {
+					display: flex;
+					margin-top: 4px;
+					
+
+					& .post {
+						&__left-column {
+							box-sizing: border-box;
+							border-right: 1px dashed $akcent__green;
+							width: 50%;
+							padding: 4px 8px 8px 8px;
+
+						}
+
+						&__right-column {
+							box-sizing: border-box;
+							width: 50%;
+							padding: 4px 8px 8px 8px;
+						}
+					}
+				}
+				&__watches {
+					margin-left: 8px;
+					padding: 5px 0;
+					border-top: 1px dashed $akcent__green;
+					border-bottom: 1px dashed $akcent__green;
+				}
+				&__buttons {
+					display: flex;
+					justify-content: flex-end;
+					margin-top: 8px;
+
+					& a {
+						text-decoration: none;
+					}
+
+					& .post {
+						&__button {
+							box-sizing: border-box;
+							display: block;
+							padding: 5px 10px;
+							border-radius: 4px;
+						}
+						&__watch {
+							color: #006186;
+							background-color: $akcent__green;
+							&:hover {
+								background-color: $akcent__green-hover;
+							}
+						}
+						&__comment {
+							margin-left: 8px;
+							color: white;
+							background-color: $heading__blue;
+							&:hover {
+								background-color: $heading__blue-hover;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.pages {
+	border: 1px solid lightgray;
+	border-radius: 3px;
+	padding: 5px 0;
+	background-color: #fff;
+	max-width: 300px;
+	width: 100%;
+	margin: 0 auto;	
+
+	&__list {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__item {
+		margin-right: 20px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		box-sizing: border-box;
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-color: $akcent__green;
+		color: black;
+		text-decoration: none;
+		text-align: center;
+		padding-top: 12px;
+		border-radius: 3px;
+
+		&.active {
+			background-color: $heading__blue;
+			color: #fff;
+		}
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+.profile {
+	box-sizing: border-box;
+/* 	height: 410px; */
+	width: 100%;
+	background-color: $heading__blue;
+	border-radius: 5px;
+	padding: 5px 10px 10px 10px;
+
+	&__picture {
+		box-sizing: border-box;
+		width: 100%;
+		// height: 100px;
+		border: 3px solid $akcent__green;
+		border-radius: 3px;
+		margin-bottom: 10px;
+	}
+
+	&__flex-wrapper {
+		display: flex;
+		height: 265px;
+		box-sizing: border-box;
+	}
+	&__left-column, &__right-column {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		width: 50%;
+		
+	}
+	&__left-column {
+		border-right: 1px dashed $akcent__green;
+		padding-right: 8px;
+	}
+	&__right-column {
+		padding-left: 10px;
+	}
+
+
+	&__heading {
+		text-align: right;
+		text-transform: uppercase;
+		font-family: 'Roboto Condensed';
+		font-size: 28px;
+		color: rgba(255, 255, 255, 0.55);
+		letter-spacing: -2px;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: white;
+		display: block;
+		padding: 5px;
+		font-size: 14px;
+		
+		&:hover {
+			background-color: $akcent__green;
+		}
+	}
+
+	&__admin-link {
+		text-decoration: none;
+		color: white;
+		display: block;
+		padding: 5px 5px 5px 0;
+		font-size: 14px;
+
+		&:hover {
+			text-decoration: underline;
+			color: $akcent__green;
+		}
+	}
+
+	&__exit, &__admin-panel {
+		text-decoration: none;
+		border: none;
+		border-radius: 3px;
+		box-sizing: border-box;
+		text-transform: uppercase;
+		color: white;
+		font-size: 14px;
+		width: 100%;
+		height: 40px;
+	}
+
+	&__exit {
+		background-color: $warning_red;
+		&:hover {
+			background-color: $warning_red-hover;
+		}
+	}
+
+	&__admin-panel {
+		display: block;
+		background-color: $akcent__green;
+		&:hover {
+			background-color: $akcent__green-hover;
+		}
+	}
+}
+
+.footer {
+	margin-top: 200px;
+	color: white;
+
+	&__image {
+		position: absolute;
+		right: 0;
+		bottom: 0px;
+		width: 300px;
+	}
+	& .wrapper {
+		position: relative;
+		box-sizing: border-box;
+		background-color: #535353cc;
+		border-radius: 5px 5px 0 0;
+		padding: 12px;
+	}
+
+	&__akcent-green {
+		text-decoration: underline;
+		color: $akcent__green;
+	}
+
+	&__heading-blue {
+		text-decoration: underline;
+		color: $heading__blue;
+	}
+
+	&__red {
+		color: #E88686;
+	}
+
+	&__link {
+		box-sizing: border-box;
+		display: block;
+		background-color: $akcent__green;
+		text-decoration: none;
+		text-transform: uppercase;
+		width: fit-content;
+		height: 40px;
+		padding: 12px 10px 0 10px;
+		color: $post__date-color;
+		border-radius: 3px;
+		margin-top: 8px;
+
+		&:hover {
+			background-color: $akcent__green-hover;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: flex-start;
+		margin-top: 10px;
+	}
+	&__button {
+		padding: 8px 10px 0 10px;
+		width: 88px;
+		height: 31px;
+		box-sizing: border-box;
+		background-color: #6e6e6e;
+		margin-right: 10px;
+		text-align: center;
+		border-radius: 3px;
+	}
+}
+
+.heading-blue {
+	color: $heading__blue;
+}

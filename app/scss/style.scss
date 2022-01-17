@@ -1,0 +1,10 @@
+// reset default styles
+@import "_reset.scss";
+// шрифты
+@import "_fonts.scss";
+// файл с переменными
+@import "_variables.scss";
+// файл с основными стилями
+@import "_main.scss";
+// файл с адаптивными стилями
+@import "_adaptive.scss";
