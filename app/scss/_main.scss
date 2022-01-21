@@ -1,18 +1,24 @@
+// переопределяю стиль reset.css и делаю b снова жирным
 b {
 	font-weight: bold;
 }
 
+// общие стили страницы
 .body {
 	background-color: rgb(197, 197, 197);
 	background: url("../images/body/background-2.jpg") no-repeat;
 	background-size: cover;
+
+	font-family: Arial, Helvetica, sans-serif;
 } 
 
+// обёртка для центрирования и ограничения ширины контента на странице
 .wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
+// стили панели навигации
 .nav {
 	box-sizing: border-box;
 	display: flex;
@@ -114,6 +120,7 @@ b {
 	}
 }
 
+// бургер для адаптива
 .burger {
 	display: none;
 	width: 200px;
@@ -215,6 +222,7 @@ b {
 	transform: rotate(-45deg);
 }
 
+// инпут поиска
 .search {
 	background-color: #707070;
 	position: relative;
@@ -258,6 +266,7 @@ b {
 	}
 }
 
+// стили макета main
 .main {
 	margin-top: 200px;
 
@@ -290,7 +299,8 @@ b {
 
 }
 
-// slider
+// 			левый столбец main 
+// слайдер
 .slider {
 	box-sizing: border-box;
 	position: relative;
@@ -381,15 +391,34 @@ b {
 	}
 }
 
+// карточки новое
 .cards {
 	box-sizing: border-box;
 	width: 100%;
 	height: $cards__container-height;
 	background-color: $left__container-bg;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	// для отображения значка new
+	position: relative;
+	&__new-indicator {
+		box-sizing: border-box;
+		padding: 8px 12px;
+		position: absolute;
+		top: -10px;
+		left: -30px;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-family: "Roboto Condensed";
+    font-size: 24px;
+		color: white;
+		background-color: #78A15C;
+		border: 1px solid #628F43;
+		z-index: 3;
+		box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.15);
+	}
 	
 	& .card {
 		box-sizing: border-box;
@@ -451,6 +480,7 @@ b {
 	}
 }
 
+// список постов
 .posts {
 	box-sizing: border-box;
 	width: 100%;
@@ -458,6 +488,8 @@ b {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+
+
 
 	.post {
 		position: relative;
@@ -581,6 +613,7 @@ b {
 	}
 }
 
+// стили кнопок переключения страниц posts
 .pages {
 	border: 1px solid lightgray;
 	border-radius: 3px;
@@ -624,6 +657,9 @@ b {
 	}
 }
 
+// 			правый столбец
+
+// профиль
 .profile {
 	box-sizing: border-box;
 /* 	height: 410px; */
@@ -726,6 +762,103 @@ b {
 	}
 }
 
+// стили чата
+.chat {
+	box-sizing: border-box;
+	background-color: $akcent__green;
+	border-radius: 5px;
+	padding: 55px 10px 10px 10px;
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+
+	/* для отображения chat__heading без применения дополнительного 
+	тега в хтмл */
+	position: relative;
+	
+
+	&.margin-top {
+		margin-top: 12px;
+	}
+	&__heading {
+		// для отображения сверху контейнера
+		position: absolute;
+		top: 10px;
+		left: 15px;
+		
+		// стили текста
+		text-align: left;
+		text-transform: uppercase;
+		font-family: 'Roboto Condensed';
+		font-size: 28px;
+		color: rgba(255, 255, 255, 0.55);
+		letter-spacing: -2px;
+		margin-bottom: 15px;
+	}
+
+	&__form {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__input {
+		width: 165px;
+	}
+	&__send-message {
+		font-size: 12px;
+	}
+	&__messages {
+		overflow: hidden;
+	}
+}
+
+// сообщение в чате
+.message {
+	box-sizing: border-box;
+	position: relative;
+	background-color: $left__container-bg;
+	border-radius: 3px;
+	padding: 5px;
+	margin-bottom: 10px;
+
+
+	&__nickname {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	&__text {
+		margin-top: 5px;
+		color: $heading__blue;
+	}
+
+	&__time {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		font-size: 12px;
+	}
+
+	&.your__message {
+		background-color: #D0E2E9;
+
+		&.message {
+			&__nickname {
+				color: #005F93;
+			}
+
+			&__text {
+				color: #717171;
+			}
+		}
+	}
+}
+
+
+
+// футер
+
 .footer {
 	margin-top: 200px;
 	color: white;
@@ -793,6 +926,9 @@ b {
 	}
 }
 
+
+
+// цвет шрифта $heading__blue
 .heading-blue {
 	color: $heading__blue;
 }
