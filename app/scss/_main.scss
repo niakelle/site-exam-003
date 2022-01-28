@@ -301,6 +301,7 @@ b {
 
 // 			левый столбец main 
 // слайдер
+/* 
 .slider {
 	box-sizing: border-box;
 	position: relative;
@@ -318,6 +319,7 @@ b {
 		width: 100%;
 		height: 100%;
 		position: relative;
+		cursor: pointer;
 
 		&-text {
 			box-sizing: border-box;
@@ -389,9 +391,98 @@ b {
 			background-color: rgb(0, 0, 0);
 			border-radius: 50% 0 0 50%;
 	}
+} */
+
+.slider {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background-color: rgb(42, 38, 38);
+	border: 15px solid rgb(143, 143, 143);
+	border-radius: 5px;
+
+	// переписываю стили для анимации слайдера
+	&__track {
+		display: flex;
+		transition: 0.3s;
+	}
+
+	&__slide {
+		box-sizing: border-box;
+		background-color: lightgrey;
+		height: $slider__height;
+		position: relative;
+		cursor: pointer;
+
+		&-text {
+			box-sizing: border-box;
+			background-color: rgba(0, 0, 0, 0.5);
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			padding: 8px 10px 8px 10px;
+		}
+
+		&-heading {
+			text-transform: uppercase;
+			color: white;
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+
+		&-description {
+			color: $heading__blue;
+			margin-top: 5px;
+		}
+
+
+		&.bleach {
+			background: url("../images/slider/ichigo-hollow-01.jpg") no-repeat;
+			background-size: cover;
+		}
+		&.one-piece {
+			background: url("../images/slider/one-piece2.png") no-repeat;
+			background-size: cover;
+		}
+		&.kurokami {
+			background: url("../images/slider/kurokami3.png") no-repeat;
+			background-size: cover;
+		}
+		&.konosuba {
+			background: url("../images/slider/konosuba4.jpg") no-repeat;
+			background-size: cover;
+		}
+	}
+
+	&__button {
+		position: absolute;
+		top: calc(50% - 20px);
+		z-index: 10;
+		font-size: 30px;
+		width: 40px;
+		height: 40px;
+		border: none;
+		font-weight: bold;
+		color: white;
+
+		&:hover {
+				background-color: rgb(123, 255, 123)
+		} 
+	}
+	&__btn-prev {
+			left: 0;
+			background-color: rgb(0, 0, 0);
+			border-radius: 0 50% 50% 0;
+	}
+	&__btn-next {
+			right: 0;
+			background-color: rgb(0, 0, 0);
+			border-radius: 50% 0 0 50%;
+	}
 }
 
-// карточки новое
+// карточки
 .cards {
 	box-sizing: border-box;
 	width: 100%;
@@ -477,7 +568,54 @@ b {
 				}
 			}
 		}
+
+		&__modal {
+			display: none;
+			position: fixed;
+			z-index: 11;
+			padding-top: 100px;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgb(0,0,0);
+			background-color: rgba(0,0,0,0.9);
+
+			&-content {
+				margin: auto;
+				display: block;
+				width: 80%;
+				max-width: 700px;
+				max-height: 80vh;
+
+				animation-name: zoom;
+				animation-duration: 0.6s;
+
+			}
+
+			&-close {
+				position: absolute;
+				top: 15px;
+				right:35px;
+				color: #f1f1f1;
+				font-size: 40px;
+				font-weight: bold;
+				transition: 0.3s;
+
+				&:hover, &:focus {
+					color: #bbb;
+					text-decoration: none;
+					cursor:pointer;
+				}
+			}
+		}
 	}
+}
+// анимация для модального окна
+@keyframes zoom {
+	from{transform: scale(0)}
+	to{transform: scale(1)}
 }
 
 // список постов
@@ -855,7 +993,44 @@ b {
 	}
 }
 
+// последние посты на форуме
+.news {
+	box-sizing: border-box;
+	margin-top: 12px;
+	border-radius: 5px;
+	background-color: #E4E9EC;
+	padding: 10px 10px 15px 10px;
 
+	&__heading {
+		display: block;
+    text-align: right;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed";
+    font-size: 28px;
+    color: #90A5B1;
+    letter-spacing: -2px;
+    padding: 0 0 10px 0;
+		border-bottom: 2px dashed $heading__blue;
+	}
+}
+
+// пост секции .news
+.publication {
+	margin-top: 8px;
+	padding-bottom: 10px;
+	border-bottom: 2px dashed $heading__blue;
+
+	&__image {
+		float: left;
+		width: 42px;
+		height: 42px;
+		margin-right: 10px;
+	}
+	
+	&__text {
+		color: #BEC0C1;
+	}
+}
 
 // футер
 
