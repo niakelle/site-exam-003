@@ -61,7 +61,7 @@
 
 	.profile {
 		max-width: 350px;
-		margin-right: 10px;
+		margin-right: 12px;
 	}
 
 	.news {
@@ -88,7 +88,8 @@
 @media screen and (max-width: 880px) {
 	.footer {
 		&__image {
-			width: 150px;
+			// width: 150px;
+			display: none;
 		}
 	}
 	.burger {
@@ -103,6 +104,19 @@
 }
 
 @media screen and (max-width: 700px) {
+	.nav {
+		&__logo {
+			max-width: 185px;
+			width: 100%;
+			&-heading {
+				font-size: 26px;
+			}
+			&-paragraph {
+				font-size: 14px;
+			}
+		}
+	}
+
 	.profile {
 		flex-grow: 1;
 		max-width: none;
@@ -115,4 +129,161 @@
 			margin-top: 12px;
 		}
 	}
+
+	.cards {
+		height:auto;
+		gap: 10px;
+	}
+	.card {
+		height: 300px;
+		max-width: 300px;
+	}
+
+
+	.burger {
+		box-sizing: border-box;
+    width: 140px;
+    text-align: right;
+    margin-right: 10px;
+		&__label {
+			padding-right: 25px;
+		}
 }
+
+	.post {
+		font-size: 14px;
+	}
+	.pages {
+		max-width: 250px;
+		&__link {
+			width: 30px;
+			height: 30px;
+			padding-top: 8px;
+		}
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.post {
+		flex-direction: column;
+		width: 100%;
+		box-sizing: border-box;
+
+		&__image {
+			min-height: 250px;
+			min-width: 275px;
+			box-sizing: border-box;
+			border-radius: 0;
+			width: 100%;
+		}
+
+		&__content {
+			min-width: 275px;
+		}
+		
+		&__heading {
+			border-radius: 0 0px 3px 0px;
+		}
+		
+	}
+
+	.burger {
+		&__menu-link {
+			font-size: 14px;
+		}
+	}
+
+	.nav {
+		&__logo {
+			max-width: 145px;
+			width: 100%;
+			&-heading {
+				font-size: 20px;
+			}
+			&-paragraph {
+				font-size: 12px;
+			}
+		}
+	}
+
+	.slider {
+		&__slide {
+			height: 350px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.card {
+		height: 200px;
+	}
+
+	.slider {
+		&__slide {
+			height: 300px;
+		}
+	}
+
+	.burger {
+		width: 110px;
+
+		&-line {
+			top: 10px;
+			width: 25px;
+	
+			&.second, &.third {
+				top: 18px;
+			}
+			&.fourth {
+				top: 26px;
+			}
+		}
+
+		&__menu-link {
+			font-size: 12px;
+		}
+
+		&__label {
+			padding-right: 15px;
+		}
+	}
+
+	.search {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.card:nth-of-type(-n+2) {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.post {
+		&__image {
+			min-height: 200px;
+		}
+	}
+
+	.slider {
+		&__slide {
+			height: 250px;
+		}
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.slider {
+		&__slide {
+			height: 220px;
+		}
+	}
+
+	.post {
+		&__image {
+			min-height: 150px;
+		}
+	}
+}
+

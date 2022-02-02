@@ -88,60 +88,101 @@
 				<div class="content">
 					<div class="content__left-column">
 						<section class="slider">
-							<a href="#">
-								<div class="slider__slide active bleach">
-									<div class="slider__slide-text">
-										<h3 class="slider__slide-heading">BLEACH</h3>
-										<p class="slider__slide-description">
-											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
-										</p>
+							<div class="slider__container">
+								<div class="slider__track">
+									<div class="slider__slide active bleach">
+										<div class="slider__slide-text">
+											<h3 class="slider__slide-heading">BLEACH</h3>
+											<p class="slider__slide-description">
+												Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+											</p>
+										</div>
+									</div>
+									<div class="slider__slide one-piece">
+										<div class="slider__slide-text">
+											<h3 class="slider__slide-heading">one piece</h3>
+											<p class="slider__slide-description">
+												Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+											</p>
+										</div>
+									</div>
+									<div class="slider__slide kurokami">
+										<div class="slider__slide-text">
+											<h3 class="slider__slide-heading">kurokami</h3>
+											<p class="slider__slide-description">
+												Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+											</p>
+										</div>
+									</div>
+									<div class="slider__slide konosuba">
+										<div class="slider__slide-text">
+											<h3 class="slider__slide-heading">Kono Subarashii Sekai ni Shukufuku wo!</h3>
+											<p class="slider__slide-description">
+												Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
+											</p>
+										</div>
 									</div>
 								</div>
-							</a>
-							<a href="#">
-								<div class="slider__slide one-piece">
-									<div class="slider__slide-text">
-										<h3 class="slider__slide-heading">one piece</h3>
-										<p class="slider__slide-description">
-											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
-										</p>
-									</div>
-								</div>
-							</a>
-							<a href="#">
-								<div class="slider__slide kurokami">
-									<div class="slider__slide-text">
-										<h3 class="slider__slide-heading">kurokami</h3>
-										<p class="slider__slide-description">
-											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
-										</p>
-									</div>
-								</div>
-							</a>
-							<a href="#">
-								<div class="slider__slide konosuba">
-									<div class="slider__slide-text">
-										<h3 class="slider__slide-heading">Kono Subarashii Sekai ni Shukufuku wo!</h3>
-										<p class="slider__slide-description">
-											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, beatae.
-										</p>
-									</div>
-								</div>
-							</a>
+							</div>
+							<div class="slider-buttons">
+								<button class="slider__button slider__btn-prev"> &lt; </button>
+								<button class="slider__button slider__btn-next"> &gt;</button>
+							</div>
 						</section>
 						<section class="main__cards cards">
+							<div class="cards__new-indicator">new</div>
 							<div class="card">
+								<a href="#" class="card__content">
+								</a>
+								<div class="card__modal">
+									<span 
+									class="card__modal-close" 
+									> <!-- onclick="document.querySelector('.card__modal').style.display='none'" -->
+									&times;
+									</span>
+									<img src="images/posts/lain.jpg" 
+									alt="card modal image"
+									class="card__modal-content">
+								</div>
+							</div>
+							<div class="card">
+								<a href="#" class="card__content">
+								</a>
+								<div class="card__modal">
+									<span 
+									class="card__modal-close" 
+									> <!-- onclick="document.querySelector('.card__modal').style.display='none'" -->
+									&times;
+									</span>
+									<img src="images/posts/lain.jpg" 
+									alt="card modal image"
+									class="card__modal-content">
+								</div>
+							</div>
+							<div class="card">
+								<a href="#" class="card__content">
+								</a>
+								<div class="card__modal">
+									<span 
+									class="card__modal-close" 
+									> <!-- onclick="document.querySelector('.card__modal').style.display='none'" -->
+									&times;
+									</span>
+									<img src="images/posts/lain.jpg" 
+									alt="card modal image"
+									class="card__modal-content">
+								</div>
+							</div>
+
+
+<!-- 							<div class="card">
 								<a href="#" class="card__content">
 								</a>
 							</div>
 							<div class="card">
 								<a href="#" class="card__content">
 								</a>
-							</div>
-							<div class="card">
-								<a href="#" class="card__content">
-								</a>
-							</div>
+							</div> -->
 
 						</section>
 						<section class="posts">
@@ -287,7 +328,6 @@
 						</section>
 					</div>					
 					<div class="content__right-column">
-
 						<div class="profile">
 							<h2 class="profile__heading">проФиль</h2>
 							<div class="profile__flex-wrapper">
@@ -337,8 +377,76 @@
 							</div>
 						</div>
 
-						<div class="chat"></div>
-						<div class="last-comments"></div>
+						<!-- Чат -->
+						<div class="chat margin-top">
+							<h2 class="chat__heading">наш чат</h2>
+
+							<div class="chat__messages">
+								<div class="message">
+									<h3 class="message__nickname">HateR</h3>
+									<p class="message__text">Lorem ipsum dolor sit.</p>
+									<span class="message__time">13:53</span>
+								</div>
+								<div class="message">
+									<h3 class="message__nickname">Jack554</h3>
+									<p class="message__text">Lorem ipsum dolor sit amet consectetur.</p>
+									<span class="message__time">13:58</span>
+								</div>
+								<div class="message your__message">
+									<h3 class="message__nickname">You</h3>
+									<p class="message__text">Lorem kolbasim dolorim sittim amet.</p>
+									<span class="message__time">14:01</span>
+								</div>
+							</div>
+
+							<form action="" method="" class="chat__form">
+								<input type="text" 
+								name="" 
+								id="send-message" 
+								class="chat__input"
+								placeholder="Введите сообщение...">
+								<button class="chat__send-message">Отправить</button>
+							</form>
+						</div>
+
+
+						<div class="news margin-top">
+							<h2 class="news__heading">All your informers</h2>
+							<div class="news__content">
+								<div class="news__publication publication">
+									<img src="images/news/imgonline-com-ua-Resize-zRUmUSVb9y.jpg" 
+									alt="profile picture" 
+									class="publication__image">
+									<p class="publication__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing 
+										elit.  <br> Obcaecati architecto dignissimos rem mollitia. 
+										<br> Accusamus?
+									</p>
+								</div>
+								<div class="news__publication publication">
+									<img src="images/news/imgonline-com-ua-Resize-zRUmUSVb9y.jpg" 
+									alt="profile picture" 
+									class="publication__image">
+									<p class="publication__text">
+										Lorem ipsum dolor sit amet, consectetur adipisicing 
+										elit.  <br> Obcaecati architecto dignissimos rem mollitia. 
+										<br> Unde quis omnis quia earum maiores quo cupiditate 
+										fugit iste in, possimus odio dolorem aspernatur neque. 
+										<br> Accusamus?
+									</p>
+								</div>
+								<div class="news__publication publication">
+									<img src="images/news/imgonline-com-ua-Resize-zRUmUSVb9y.jpg" 
+									alt="profile picture" 
+									class="publication__image">
+									<p class="publication__text">
+										Obcaecati architecto dignissimos rem mollitia. 
+										<br> Unde quis omnis quia earum maiores quo cupiditate 
+										fugit iste in, possimus odio dolorem aspernatur neque. 
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>					
 				</div>
 			</div>
